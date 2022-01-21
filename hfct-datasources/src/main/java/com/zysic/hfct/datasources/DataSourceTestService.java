@@ -3,12 +3,7 @@ package com.zysic.hfct.datasources;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * 测试
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2017/9/16 23:10
- */
+
 @Service
 public class DataSourceTestService {
 //    @Autowired
