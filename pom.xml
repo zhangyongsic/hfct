@@ -16,6 +16,8 @@
 
 
         <module>hfct-test</module>
+        <module>hfct-datalog</module>
+        <module>hfct-optlog</module>
     </modules>
 
     <properties>
@@ -23,6 +25,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <spring.version>5.2.1.RELEASE</spring.version>
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
+        <tomcat.version>9.0.27</tomcat.version>
 
         <lombok.version>1.18.8</lombok.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -35,13 +38,19 @@
         <guava.version>23.0</guava.version>
         <redisson.verson>3.11.0</redisson.verson>
 
-        <druid.version>1.1.3</druid.version>
+        <druid.version>1.1.10</druid.version>
 
         <aspectj.version>1.7.4</aspectj.version>
-        <mybatis-plugs.version>3.3.2</mybatis-plugs.version>
+        <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <mysql.version>5.1.47</mysql.version>
 
         <postgresql.version>42.1.1</postgresql.version>
+
+        <bcpkix.version>1.60</bcpkix.version>
+        <commons-codec.version>1.10</commons-codec.version>
+
+        <logback.version>1.2.3</logback.version>
+
 
     </properties>
 
@@ -118,6 +127,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-tomcat</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat.version}</version>
+                <scope>compile</scope>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>tomcat-annotations-api</artifactId>
+                        <groupId>org.apache.tomcat</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -263,7 +286,7 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plugs.version}</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <dependency>
@@ -272,11 +295,32 @@
                 <version>${mysql.version}</version>
             </dependency>
 
+
             <dependency>
-                <groupId>org.postgrsql</groupId>
+                <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk15on</artifactId>
+                <version>${bcpkix.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>

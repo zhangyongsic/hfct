@@ -30,6 +30,18 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.zysic</groupId>
+            <artifactId>hfct-datasources</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zysic</groupId>
+            <artifactId>hfct-datalog</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
 
     </dependencies>
 

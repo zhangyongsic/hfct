@@ -31,6 +31,10 @@ public class ResponseResult<T> {
         this(BusinessErrorCode.SUCCESS,data);
     }
 
+
+    public static <T> ResponseResult ok(){
+        return new ResponseResult(BusinessErrorCode.SUCCESS);
+    }
     public static <T> ResponseResult ok(T data){
         return new ResponseResult(data);
     }
